@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cake Bliss</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #444, #222);
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .navbar .logo {
+            font-size: 26px;
+            color: #ffcc00;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        /* Updated Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown > a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .dropdown > a:hover {
+            background-color: rgba(255, 204, 0, 0.2);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid #444;
+            margin-top: 5px;
+        }
+        .dropdown-content a {
+            color: #f0f0f0;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffcc00;
+            color: #121212;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar .login-button {
+            background: linear-gradient(to right, #ffcc00, #e6b800);
+            color: #121212;
+            border: none;
+            padding: 10px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .navbar .login-button:hover {
+            transform: scale(1.1);
+        }
+        .cakes-section {
+            text-align: center;
+            padding: 40px;
+        }
+        .cakes-section h2 {
+            color: #ffcc00;
+        }
+        .cake-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .cake-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .cake-item img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        .cake-item p {
+            margin-top: 10px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        /* Footer */
+        .footer {
+            background: #222;
+            color: #f0f0f0;
+            padding: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .about-contact {
+            padding: 40px;
+            text-align: center;
+        }
+        .about-contact h2 {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="#" class="logo">Cake Bliss</a>
+    <div class="nav-links">
+        <div class="dropdown">
+            <a href="#">Cakes</a>
+            <div class="dropdown-content">
+                <a href="#chocolate">Chocolate Cake</a>
+                <a href="#vanilla">Vanilla Cake</a>
+                <a href="#strawberry">Strawberry Cake</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">More</a>
+            <div class="dropdown-content">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+    <button class="login-button" onclick="window.location.href='login.html';">Login</button>
+</div>
+<div class="container">
+    <h1>Welcome to Our Cake Bliss</h1>
+    <p>We offer delicious cakes for all occasions. Customize your order and let us bring joy to your celebrations!</p>
+</div>
+<!-- Cakes Section -->
+<div class="cakes-section" id="cakes">
+    <h2>Our Cakes</h2>
+    <div class="cake-gallery">
+        <div class="cake-item" id="chocolate">
+            <img src="C:\xampp\htdocs\project\pexels-photo-291528.jpeg"alt="Chocolate Cake">
+            <p>Chocolate Cake</p>
+        </div>
+        <div class="cake-item" id="vanilla">
+            <img src="C:\xampp\htdocs\project\pexels-pixabay-264939.jpg"alt="Vanilla Cake">
+            <p>Vanilla Cake</p>
+        </div>
+        <div class="cake-item" id="strawberry">
+            <img src="C:\xampp\htdocs\project\pexels-heyronmar-806363.jpg" alt="Strawberry Cake">
+            <p>Strawberry Cake</p>
+        </div>
+    </div>
+</div>
+<!-- About Us Section -->
+<div class="about-contact" id="about">
+    <h2>About Us</h2>
+    <p>At Cake Bliss, we are passionate about crafting the most delicious and visually stunning cakes for every occasion. Our expert bakers use the finest ingredients to ensure each bite is a delightful experience.</p>
+</div>
+<!-- Contact Section -->
+<div class="about-contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@cakebliss.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Address: 123 Sweet Street, Dessert City</p>
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Cake Bliss. All rights reserved.</p>
+</footer>
+</body>
+</html>
